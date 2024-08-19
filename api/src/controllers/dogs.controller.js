@@ -1,11 +1,10 @@
 const { Dogs, Temperaments } = require('../db')
 const { Op } = require('sequelize')
 const Formatter = require('../helpers/Formatter')
-
+require('dotenv').config()
+const {API_KEY, API_URL} = process.env
 const formatter = new Formatter()
 
-const API_KEY = 'live_HO7iCeIZPbtaW4eto9ZgKZOdocp2qSrKyR9OBFX43e9eQrs2UWcLkKjTwiCjuWJi';
-const API_URL = 'https://api.thedogapi.com/v1/breeds';
 
 const getDogApi = async () => {
   try {
