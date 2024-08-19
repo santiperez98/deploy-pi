@@ -1,0 +1,9 @@
+export const GET_ALLDOGS = 'GET_ALLDOGS';
+export const GET_ALLTEMPERAMENTS = 'GET_ALLTEMPERAMENTS';
+export const FILTER_DOGS = 'FILTER_DOGS';
+export const RESET_FILTERS = 'RESET_FILTERS';
+export const GET_DOG_BY_NAME = 'GET_DOG_BY_NAME';
+export const SET_LOADING = 'SET_LOADING';
+export const GET_DOG_BY_ID = 'GET_DOG_BY_ID'
+export const CLEAN_DETAILS = 'CLEAN_DETAILS'
+export const ADD_FAV = 'ADD_FAV'

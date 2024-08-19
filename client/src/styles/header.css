@@ -1,0 +1,127 @@
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  background-color: var(--primary-color);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 0 20px;
+  position: fixed; /* Esto hace que el header sea fijo */
+  top: 0; /* Anclarlo en la parte superior */
+  z-index: 1000; /* Asegurarnos de que esté por encima de otros elementos */
+  box-sizing: border-box; /* Asegura que el padding y el border no afecten al tamaño total del header */
+}
+
+.Header__back {
+  display: flex;
+  align-items: center;
+}
+
+.Header__back-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.Header__back-text {
+  margin-left: 8px;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.Header__logo-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; /* Asegura que el logo esté por debajo del menú en dispositivos móviles */
+}
+
+.Header__logo {
+  width: 120px;
+  height: 120px;
+  animation: pulse 1.5s infinite;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1100; /* Asegura que el menú de hamburguesa esté por encima del menú de navegación */
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.Header__nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 28px;
+  position: relative;
+  z-index: 1000; /* Asegura que el menú esté por encima del logo en dispositivos móviles */
+}
+
+.Header__nav.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  z-index: 1000; /* Asegura que el menú desplegable esté por encima de otros elementos */
+}
+
+.Nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.Nav > a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: var(--secondary-color);
+}
+
+.Nav > a > li {
+  list-style: none;
+  letter-spacing: 2px;
+}
+
+.Nav > a > li:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 900px) {
+  .Header__nav {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .Header__nav.open {
+    display: flex;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

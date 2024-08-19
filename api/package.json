@@ -1,0 +1,42 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -L",
+    "test:db": "jest ./tests/db/db.test.js --verbose --detectOpenHandles",
+    "test:models": "jest ./tests/db/models --verbose --detectOpenHandles",
+    "test:controllers": "jest ./tests/controller --verbose --detectOpenHandles",
+    "test:routes": "jest ./tests/routes --verbose --detectOpenHandles"
+  },
+  "author": "Henry",
+  "license": "ISC",
+  "engines": {
+    "node": ">=12.18.3",
+    "npm": ">=6.14.6"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.7.0",
+    "pg": "^8.5.1",
+    "sequelize": "^6.3.5"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "jest": "^29.4.2",
+    "mocha": "^10.6.0",
+    "nodemon": "^2.0.6",
+    "standard": "^17.0.0",
+    "supertest": "^6.0.1",
+    "supertest-session": "^4.1.0"
+  }
+}
