@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -L",
+    "start": "node index.js",
     "test:db": "jest ./tests/db/db.test.js --verbose --detectOpenHandles",
     "test:models": "jest ./tests/db/models --verbose --detectOpenHandles",
     "test:controllers": "jest ./tests/controller --verbose --detectOpenHandles",
